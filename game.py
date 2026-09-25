@@ -1,10 +1,11 @@
 from goblin import Goblin
 from hero import Hero
+from boss import Boss
 
 
 ARENA_NAME = "The Diagonal Flame"
 
-def battle(hero : Hero, enemy : Goblin):
+def battle(hero : Hero, enemy):
     round_num = 1
     while hero.is_alive() and enemy.is_alive():
         print(f"Round {round_num}")
@@ -47,6 +48,9 @@ def main():
     print()
 
     battle(hero, goblin)
+
+    boss = Boss("The Boss")
+    battle(hero, boss)
 
     
     
